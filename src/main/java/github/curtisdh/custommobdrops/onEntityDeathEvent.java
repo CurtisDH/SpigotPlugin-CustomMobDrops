@@ -32,11 +32,21 @@ public class onEntityDeathEvent implements Listener
                 System.out.println(e);
                 return;
             }
-
             if (entity.getType() == EntityType.valueOf(entities.getKey()))
             {
                 for (Map.Entry<String, Integer> ItemMaterialAndDropRate : entities.getValue().entrySet())
                 {
+                    try
+                    {
+                        Material.valueOf(ItemMaterialAndDropRate.getKey()).toString();
+                    }
+                    catch (Exception e)
+                    {
+                        CustomMobDrops.PrintWithClassName(this,Material.valueOf(
+                                ItemMaterialAndDropRate.getKey()).toString());
+                        CustomMobDrops.PrintWithClassName(this,e.getMessage());
+                        continue;
+                    }
                     entity.getLocation().getWorld().dropItemNaturally(entity.getLocation(),
                             new ItemStack(
                                     Material.valueOf(ItemMaterialAndDropRate.getKey()),
@@ -45,9 +55,5 @@ public class onEntityDeathEvent implements Listener
                 }
             }
         }
-//        if(entity instanceof Husk)
-//        {
-//            entity.getLocation().getWorld().dropItemNaturally(entity.getLocation(),new ItemStack(Material.valueOf(itemMaterial), dropRate));
-//        }
     }
 }

@@ -2,3 +2,9 @@ name: CustomMobDrops
 version: '${project.version}'
 main: github.curtisdh.custommobdrops.CustomMobDrops
 api-version: 1.17
+
+commands:
+  reloadConfig:
+    description: Reloads the config file for 'CustomMobDrops'
+    usage: /reloadConfig
+    aliases: [customDropReload,DropReload,cdre]

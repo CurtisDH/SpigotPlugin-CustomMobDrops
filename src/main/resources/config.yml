@@ -3,3 +3,6 @@ settings:
     husk:
       droprate: 1
       itemMaterial: SAND
+    slime:
+      droprate: 3
+      itemMaterial: SLIME_BALL
