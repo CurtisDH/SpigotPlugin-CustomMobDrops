@@ -1,0 +1,4 @@
+name: CustomMobDrops
+version: '${project.version}'
+main: github.curtisdh.custommobdrops.CustomMobDrops
+api-version: 1.17
