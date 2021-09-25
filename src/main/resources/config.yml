@@ -1,0 +1,5 @@
+settings:
+  mobs:
+    husk:
+      droprate: 1
+      itemMaterial: SAND
